@@ -29,6 +29,9 @@ namespace greenwerx.Client
         public frmLogin()
         {
             InitializeComponent();
+            this.txtUsername.Text = "bluesektor";
+            this.txtPassword.Text = "w84meuass";
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

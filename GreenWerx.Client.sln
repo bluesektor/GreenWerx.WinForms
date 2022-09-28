@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenWerx.Client", "GreenWerx.Client\GreenWerx.Client.csproj", "{7E26A8C8-CFB9-4F59-9A26-B907C288FC27}"
 EndProject
@@ -36,6 +36,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientCore", "ClientCore\ClientCore.csproj", "{85E91253-EB99-43FD-A849-BC71845325E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grow", "Plugins\Grow\Grow.csproj", "{F6051360-34B3-4224-BF60-A44275FF443B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analyzer", "Plugins\Analyzer\Analyzer.csproj", "{B0F3CE51-A5E7-4B56-8397-04548E0FF283}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -203,6 +205,18 @@ Global
 		{F6051360-34B3-4224-BF60-A44275FF443B}.Release|x64.Build.0 = Release|Any CPU
 		{F6051360-34B3-4224-BF60-A44275FF443B}.Release|x86.ActiveCfg = Release|Any CPU
 		{F6051360-34B3-4224-BF60-A44275FF443B}.Release|x86.Build.0 = Release|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Debug|x64.Build.0 = Debug|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Debug|x86.Build.0 = Debug|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Release|x64.ActiveCfg = Release|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Release|x64.Build.0 = Release|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Release|x86.ActiveCfg = Release|Any CPU
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -220,61 +234,9 @@ Global
 		{2BBF9788-2B14-41D8-A0AC-E3E838407EBA} = {5E63B59E-4E96-4E42-83D9-6FBCCEF881C0}
 		{85E91253-EB99-43FD-A849-BC71845325E1} = {026F195C-402C-4638-A63A-30799E1CDB63}
 		{F6051360-34B3-4224-BF60-A44275FF443B} = {5E63B59E-4E96-4E42-83D9-6FBCCEF881C0}
+		{B0F3CE51-A5E7-4B56-8397-04548E0FF283} = {5E63B59E-4E96-4E42-83D9-6FBCCEF881C0}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 14
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://treemon.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = GreenWerx.Client\\GreenWerx.Client.csproj
-		SccProjectName1 = GreenWerx.Client
-		SccLocalPath1 = GreenWerx.Client
-		SccProjectUniqueName2 = Plugins\\Settings\\Settings.csproj
-		SccProjectTopLevelParentUniqueName2 = GreenWerx.Client.sln
-		SccProjectName2 = Plugins/Settings
-		SccLocalPath2 = Plugins\\Settings
-		SccProjectUniqueName3 = Plugins\\Tools\\Tools.csproj
-		SccProjectTopLevelParentUniqueName3 = GreenWerx.Client.sln
-		SccProjectName3 = Plugins/Tools
-		SccLocalPath3 = Plugins\\Tools
-		SccProjectUniqueName4 = ..\\..\\Common\\3rdParty\\PluginInterface\\PluginInterface\\PluginInterface.csproj
-		SccProjectName4 = ../../Common/3rdParty/PluginInterface/PluginInterface
-		SccLocalPath4 = ..\\..\\Common\\3rdParty\\PluginInterface\\PluginInterface
-		SccProjectUniqueName5 = ..\\..\\Common\\GreenWerx.Models\\GreenWerx.Models.csproj
-		SccProjectTopLevelParentUniqueName5 = GreenWerx.Client.sln
-		SccProjectName5 = ../../Common/GreenWerx.Models
-		SccLocalPath5 = ..\\..\\Common\\GreenWerx.Models
-		SccProjectUniqueName6 = ..\\..\\Common\\GreenWerx.Managers\\GreenWerx.Managers.csproj
-		SccProjectTopLevelParentUniqueName6 = GreenWerx.Client.sln
-		SccProjectName6 = ../../Common/GreenWerx.Managers
-		SccLocalPath6 = ..\\..\\Common\\GreenWerx.Managers
-		SccProjectUniqueName7 = ..\\..\\Common\\GreenWerx.Data\\GreenWerx.Data.csproj
-		SccProjectTopLevelParentUniqueName7 = GreenWerx.Client.sln
-		SccProjectName7 = ../../Common/GreenWerx.Data
-		SccLocalPath7 = ..\\..\\Common\\GreenWerx.Data
-		SccProjectUniqueName8 = ..\\..\\Common\\GreenWerx.Utilites\\GreenWerx.Utilites.csproj
-		SccProjectTopLevelParentUniqueName8 = GreenWerx.Client.sln
-		SccProjectName8 = ../../Common/GreenWerx.Utilites
-		SccLocalPath8 = ..\\..\\Common\\GreenWerx.Utilites
-		SccProjectUniqueName9 = Plugins\\Enterprise\\EnterpriseTools\\EnterpriseTools.csproj
-		SccProjectTopLevelParentUniqueName9 = GreenWerx.Client.sln
-		SccProjectName9 = Plugins/Enterprise/EnterpriseTools
-		SccLocalPath9 = Plugins\\Enterprise\\EnterpriseTools
-		SccProjectUniqueName10 = Plugins\\Dashboard\\Dashboard\\Dashboard.csproj
-		SccProjectTopLevelParentUniqueName10 = GreenWerx.Client.sln
-		SccProjectName10 = Plugins/Dashboard/Dashboard
-		SccLocalPath10 = Plugins\\Dashboard\\Dashboard
-		SccProjectUniqueName11 = Plugins\\Home\\Home\\Home.csproj
-		SccProjectTopLevelParentUniqueName11 = GreenWerx.Client.sln
-		SccProjectName11 = Plugins/Home/Home
-		SccLocalPath11 = Plugins\\Home\\Home
-		SccProjectUniqueName12 = ClientCore\\ClientCore.csproj
-		SccProjectTopLevelParentUniqueName12 = GreenWerx.Client.sln
-		SccProjectName12 = ClientCore
-		SccLocalPath12 = ClientCore
-		SccProjectUniqueName13 = Plugins\\Grow\\Grow.csproj
-		SccProjectTopLevelParentUniqueName13 = GreenWerx.Client.sln
-		SccProjectName13 = Plugins/Grow
-		SccLocalPath13 = Plugins\\Grow
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47786A6E-83B5-417F-A2A7-AA94941D31A4}
 	EndGlobalSection
 EndGlobal
