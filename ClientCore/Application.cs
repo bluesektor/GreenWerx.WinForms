@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Managers;
-using greenwerx.Models.App;
+using GreenWerx.Managers;
+using GreenWerx.Models.App;
 
 namespace ClientCore
 {
@@ -86,15 +86,15 @@ namespace ClientCore
         public static string GetSetting(string name, bool useDatabase, string dbConnectionKey, string sessionKey)
         {
             AppManager am = new AppManager(dbConnectionKey, "FORMS", sessionKey);
-            return am.GetSetting(name, false)?.Value;
+            return am.GetSetting(name)?.Value;
         }
 
         public static AppInfo GetSettings(bool useDatabase, string dbConnectionKey, string sessionKey)
         {
             AppInfo settings = new AppInfo();
             AppManager am = new AppManager(dbConnectionKey, "FORMS", sessionKey);
-            settings.ActiveDbConnectionKey = am.GetSetting("DefaultDbConnection", false)?.Value;
-            settings.AppKey = am.GetSetting("AppKey", false)?.Value;//this will comeback empty because we don't trust yet.
+            settings.ActiveDbConnectionKey = am.GetSetting("DefaultDbConnection")?.Value;
+            settings.AppKey = am.GetSetting("AppKey")?.Value;//this will comeback empty because we don't trust yet.
             return settings;
         }
 

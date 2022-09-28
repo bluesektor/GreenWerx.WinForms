@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Models;
-using greenwerx.Managers.Membership;
-using greenwerx.Utilites.Extensions;
-using greenwerx.Models.Store;
+using GreenWerx.Models;
+using GreenWerx.Managers.Membership;
+using GreenWerx.Utilites.Extensions;
+using GreenWerx.Models.Store;
+using GreenWerx.Models.Membership;
 
 namespace ClientCore.Controls
 {
@@ -56,7 +57,7 @@ namespace ClientCore.Controls
             chkDeleted.Checked = _node.Deleted;
             chkPrivate.Checked = _node.Private;
 
-            lblCreatedBy.Text = _userManager.Get(_node.CreatedBy)?.Name;
+            lblCreatedBy.Text =  (_userManager.Get(_node.CreatedBy).Result as User) ?.Name;
             lblDateCreated.Text = _node.DateCreated.ToShortDateString();
 
             for(int i = 0; i < cboRoleOperation.Items.Count; i++)
@@ -71,7 +72,9 @@ namespace ClientCore.Controls
                     break;
                 }
             }
-            lblAccount.Text = _accountManager.Get(_node.AccountUUID)?.Name;
+           var res=  _accountManager.Get(_node.AccountUUID);
+            if(res.Code  == 200)
+                lblAccount.Text =(res.Result as Account)?.Name;
         
             ////if (File.Exists(_node.Image))
             ////{

@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Models;
+using GreenWerx.Models;
 using ClientCore.Models;
-using greenwerx.Models.Store;
-using greenwerx.Managers.Store;
-using greenwerx.Utilites.Extensions;
+using GreenWerx.Models.Store;
+using GreenWerx.Managers.Store;
+using GreenWerx.Utilites.Extensions;
 using AutoMapper;
-using greenwerx.Managers;
-using greenwerx.Models.App;
+using GreenWerx.Managers;
+using GreenWerx.Models.App;
+ 
 
 namespace ClientCore.Controls
 {

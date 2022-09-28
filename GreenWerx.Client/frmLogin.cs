@@ -10,11 +10,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+ 
+using GreenWerx.Managers;
+using GreenWerx.Managers.Membership;
+using GreenWerx.Models.App;
+using GreenWerx.Models.Membership;
 using greenwerx.Client.Utilities;
-using greenwerx.Managers;
-using greenwerx.Managers.Membership;
-using greenwerx.Models.App;
-using greenwerx.Models.Membership;
 
 namespace greenwerx.Client
 {
@@ -66,7 +67,7 @@ namespace greenwerx.Client
             string userJson = JsonConvert.SerializeObject(user);
 
             SessionManager sm = new SessionManager(dbKey);
-            _userSession = sm.SaveSession(ipAddress, user.UUID, userJson, false);
+            _userSession = sm.SaveSession(ipAddress, user.UUID, user.AccountUUID,  userJson,  false);
 
             if (_userSession == null)
             {

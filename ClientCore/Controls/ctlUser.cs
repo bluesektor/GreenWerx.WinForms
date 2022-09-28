@@ -6,12 +6,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using greenwerx.Managers;
-using greenwerx.Managers.Membership;
-using greenwerx.Models;
-using greenwerx.Models.App;
-using greenwerx.Models.Membership;
-using greenwerx.Utilites.Extensions;
+using GreenWerx.Managers;
+using GreenWerx.Managers.Membership;
+using GreenWerx.Models;
+using GreenWerx.Models.App;
+using GreenWerx.Models.Membership;
+using GreenWerx.Utilites.Extensions;
+using GreenWerx.Models.Datasets;
 
 namespace ClientCore.Controls
 {
@@ -50,7 +51,8 @@ namespace ClientCore.Controls
         public void Show( string accountUUID )
         {
             AccountManager am = new AccountManager(_connectionKey, _sessionKey);
-            List<User> users = am.GetAccountMembers(accountUUID, false);
+            DataFilter f = new DataFilter();
+            List<User> users = am.GetAccountMembers(accountUUID, ref f);
 
             List<INode> nodes = new List<INode>();
             if (users.Count > 0)

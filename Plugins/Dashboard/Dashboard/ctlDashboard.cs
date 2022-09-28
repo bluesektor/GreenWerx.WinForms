@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PluginInterface;
-using greenwerx.Models.App;
+using GreenWerx.Models.App;
 
 namespace Dashboard
 {

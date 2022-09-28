@@ -5,8 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
-using greenwerx.Managers;
-using greenwerx.Models.App;
+using GreenWerx.Managers;
+using GreenWerx.Models.App;
 using static System.Windows.Forms.ListView;
 using static System.Windows.Forms.ListViewItem;
 
@@ -103,7 +103,8 @@ namespace Settings
             string pluginDirectory = Application.StartupPath + @"\Plugins";
 
             AppManager am = new AppManager(_appSettings.ActiveDbConnectionKey, "FORMS", _session.AuthToken);
-            string pluginOrder = am.GetSetting(_session.UserName + "PluginOrder", false)?.Value;
+           
+            string pluginOrder = am.GetSetting(_session.UserName + "PluginOrder")?.Value;
             List<string> plugins = new List<string>();
 
             if (!string.IsNullOrEmpty(pluginOrder))

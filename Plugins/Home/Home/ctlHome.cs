@@ -8,17 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PluginInterface;
-using greenwerx.Models.App;
-using greenwerx.Models;
+using GreenWerx.Models.App;
+using GreenWerx.Models;
 using ClientCore.Extensions;
-using greenwerx.Managers.Membership;
-using greenwerx.Models.Membership;
+using GreenWerx.Managers.Membership;
+using GreenWerx.Models.Membership;
 using Newtonsoft.Json;
 using AutoMapper;
 using ClientCore.Controls;
-using greenwerx.Utilites.Extensions;
+using GreenWerx.Utilites.Extensions;
 using ClientCore.Models;
-using greenwerx.Managers;
+using GreenWerx.Managers;
+using GreenWerx.Models.Datasets;
 
 namespace Home
 {
@@ -66,7 +67,8 @@ namespace Home
 
             AccountManager am = new AccountManager(this._appSettings.ActiveDbConnectionKey, _session.AuthToken);
             User u = JsonConvert.DeserializeObject<User>(_session.UserData);
-            List<Account> accounts = am.GetUsersAccounts(u.UUID);
+            DataFilter f = new DataFilter();
+            List<Account> accounts = am.GetUsersAccounts(u.UUID, ref f);
 
             List<INode> nodes = accounts.ConvertAll(new Converter<Account, INode>(NodeEx.ObjectToNode));
             _nodeTree = new ctlNodeTree(_appSettings.ActiveDbConnectionKey, _session.AuthToken, this);
@@ -218,7 +220,8 @@ namespace Home
 
             am.Delete(n);
             _nodeTree.DeleteFromTree(n);
-            List<Account> subAccounts = am.GetAccounts(n.AccountUUID).Where(x => x.UUParentID == n.UUID).ToList();
+            DataFilter f = new DataFilter();
+            List<Account> subAccounts = am.GetAccounts(n.AccountUUID, ref f).Where(x => x.UUParentID == n.UUID).ToList();
 
             foreach (Account a in subAccounts)
             {

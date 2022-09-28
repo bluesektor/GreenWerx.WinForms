@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Managers;
-using greenwerx.Models;
+using GreenWerx.Managers;
+using GreenWerx.Models;
 
 namespace ClientCore.Dialogs
 {

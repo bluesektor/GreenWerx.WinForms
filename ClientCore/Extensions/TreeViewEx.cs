@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Models;
-using greenwerx.Utilites.Extensions;
+using GreenWerx.Models;
+using GreenWerx.Utilites.Extensions;
 
 namespace ClientCore.Extensions
 {

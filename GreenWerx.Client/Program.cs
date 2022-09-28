@@ -6,8 +6,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Managers;
-using greenwerx.Models.App;
+using GreenWerx.Managers;
+using GreenWerx.Models.App;
 
 namespace greenwerx.Client
 {

@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Managers;
-using greenwerx.Managers.Membership;
-using greenwerx.Models.App;
-using greenwerx.Models.Membership;
-using greenwerx.Utilites.Helpers;
-using greenwerx.Utilites.Security;
-using static greenwerx.Utilites.Security.PasswordHash;
+using GreenWerx.Managers;
+using GreenWerx.Managers.Membership;
+using GreenWerx.Models.App;
+using GreenWerx.Models.Membership;
+using GreenWerx.Utilites.Helpers;
+using GreenWerx.Utilites.Security;
+using static GreenWerx.Utilites.Security.PasswordHash;
 
 namespace greenwerx.Client
 {
@@ -183,7 +183,7 @@ namespace greenwerx.Client
                 return;
             }
 
-            if (PasswordHash.CheckStrength(txtPassword.Text) < PasswordScore.Medium)
+            if (PasswordHash.CheckStrength(txtPassword.Text) < PasswordHash.PasswordScore.Medium)
             {
                 this.txtMsg.Text = "Password is WEAK!";
                 return;

@@ -7,18 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Models.Inventory;
-using greenwerx.Models;
+using GreenWerx.Models.Inventory;
+using GreenWerx.Models;
 using ClientCore.Models;
-using greenwerx.Managers.Inventory;
-using greenwerx.Utilites.Extensions;
+using GreenWerx.Managers.Inventory;
+using GreenWerx.Utilites.Extensions;
 using AutoMapper;
-using greenwerx.Models.App;
-using greenwerx.Managers;
+using GreenWerx.Models.App;
+using GreenWerx.Managers;
 using Newtonsoft.Json;
-using greenwerx.Managers.Store;
-using greenwerx.Models.Geo;
-using greenwerx.Managers.General;
+using GreenWerx.Managers.Store;
+using GreenWerx.Models.Geo;
+using GreenWerx.Managers.General;
+using GreenWerx.Managers.Geo;
 
 namespace ClientCore.Controls
 {
@@ -136,7 +137,7 @@ namespace ClientCore.Controls
                 cboLocationType.SelectedIndex = _locationTypes.IndexOf(_locationTypes.Single(w => w == _selectedItem.LocationType));
 
             LocationManager lm = new LocationManager(_connectionKey, _sessionKey);
-            Location location = (Location)lm.Get(item.LocationUUID);
+            Location location =  (lm.Get(item.LocationUUID)).Result as Location;
             lblLocation.Text = location?.Name;
 
             txtQuantity.Text =  item.Quantity.ToString();
@@ -144,7 +145,7 @@ namespace ClientCore.Controls
 
             lblReferenceType.Text  = item.ReferenceType + ":";//  product, item, user, ballast, plant
             AttributeManager atm = new AttributeManager(_connectionKey, _sessionKey);
-            List<greenwerx.Models.General.Attribute> atts = atm.GetAttributes(item.ReferenceUUID, item.ReferenceType, item.AccountUUID);
+            List<GreenWerx.Models.General.Attribute> atts = atm.GetAttributes(item.ReferenceUUID, item.ReferenceType, item.AccountUUID);
             if (atts.Count > 0) {
                 lblReferenceValue.Text = atts[0].Value;
             }

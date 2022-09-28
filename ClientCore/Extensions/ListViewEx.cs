@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Models;
+using GreenWerx.Models;
 
 namespace ClassLibrary1.Extensions
 {

@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Managers.Membership;
-using greenwerx.Models;
+using GreenWerx.Managers.Membership;
+using GreenWerx.Models;
 using ClientCore.Extensions;
 using ClientCore.Controls;
 using ClientCore.Dialogs;
@@ -115,7 +115,7 @@ namespace ClientCore.Controls
             n.AccountUUID = GetAccountUUID();
             n.UUParentID = SelectedNode?.UUID;
             n.UUParentIDType = SelectedNode?.UUIDType;
-            n.ParentId = SelectedNode?.ParentId;
+            n.UUParentID = SelectedNode?.UUParentID;
             _parent.Save(n);
         }
 

@@ -7,18 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Managers.Membership;
-using greenwerx.Managers.Store;
-using greenwerx.Models.Geo;
-using greenwerx.Models;
+using GreenWerx.Managers.Membership;
+using GreenWerx.Managers.Store;
+using GreenWerx.Models.Geo;
+using GreenWerx.Models;
 using ClientCore.Extensions;
-using greenwerx.Utilites.Extensions;
-using greenwerx.Models.App;
-using greenwerx.Data.Logging.Models;
+using GreenWerx.Utilites.Extensions;
+using GreenWerx.Models.App;
+using GreenWerx.Data.Logging.Models;
 using System.Diagnostics;
 using ClientCore.Models;
 using AutoMapper;
-using greenwerx.Managers;
+using GreenWerx.Managers;
+using GreenWerx.Managers.Geo;
 
 namespace ClientCore.Controls
 {
@@ -188,7 +189,7 @@ namespace ClientCore.Controls
      
         LocationManager _locationManager;
 
-        List<Location> _countries = new List<greenwerx.Models.Geo.Location>();
+        List<Location> _countries = new List<GreenWerx.Models.Geo.Location>();
 
         private void LoadCountries()
         {
@@ -205,7 +206,7 @@ namespace ClientCore.Controls
            cboCountry.SelectedIndex = _countries.IndexOf(_countries.Single(w => w.UUID == _selectedLocation.Country));
         }
 
-        List<Location> _states = new List<greenwerx.Models.Geo.Location>();
+        List<Location> _states = new List<GreenWerx.Models.Geo.Location>();
 
         private void LoadStates(string countryUUID)
         {
@@ -222,7 +223,7 @@ namespace ClientCore.Controls
             cboState.SelectedIndex = _states.IndexOf(_states.Single(w => w.UUID == _selectedLocation.State));
         }
 
-        List<Location> _cities = new List<greenwerx.Models.Geo.Location>();
+        List<Location> _cities = new List<GreenWerx.Models.Geo.Location>();
 
         private void LoadCities(string stateUUID)
         {

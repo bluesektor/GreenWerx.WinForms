@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using greenwerx.Managers.Membership;
-using greenwerx.Models;
-using greenwerx.Managers;
-using greenwerx.Managers.General;
-using greenwerx.Models.General;
+using GreenWerx.Managers.Membership;
+using GreenWerx.Models;
+using GreenWerx.Managers;
+using GreenWerx.Managers.General;
+using GreenWerx.Models.General;
+using GreenWerx.Models.Datasets;
 
 namespace ClientCore.Controls
 {
@@ -53,7 +54,8 @@ namespace ClientCore.Controls
                 return;
             
             _item = (Item)n;
-            _unitsOfMeasure = _uomManager.GetUnitsOfMeasure(n.AccountUUID);
+            DataFilter f = new DataFilter();
+            _unitsOfMeasure = _uomManager.GetUnitsOfMeasure(n.AccountUUID, ref f);
 
             chkCustom.Checked = _item.Custom;
             txtCost.Text = _item.Cost.ToString();
