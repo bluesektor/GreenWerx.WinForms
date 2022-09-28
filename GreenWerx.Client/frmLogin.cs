@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿ 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +16,7 @@ using GreenWerx.Managers.Membership;
 using GreenWerx.Models.App;
 using GreenWerx.Models.Membership;
 using greenwerx.Client.Utilities;
+using Newtonsoft.Json;
 
 namespace greenwerx.Client
 {
