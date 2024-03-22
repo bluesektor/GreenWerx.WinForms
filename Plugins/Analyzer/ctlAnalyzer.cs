@@ -145,6 +145,7 @@ namespace Analyzer
                     {
                         Color newColor = Color.FromArgb(76, 255,  0); //bright green
                         processedBitmap.SetPixel(x, y, newColor);
+                        //draw a circle at pixel location
                         using (Graphics grf = Graphics.FromImage(processedBitmap))
                         {
                             using (Brush brsh = new SolidBrush(ColorTranslator.FromHtml("#ff00ffff")))
@@ -153,11 +154,6 @@ namespace Analyzer
                             }
                         }
                     }
-                  
-                    // calculate new pixel value
-                    //Color newPixel = oldPixel;
-                     //r 76 b 255 g 0
-                 
                 }
             }
             this.picBoxResult.SizeMode = PictureBoxSizeMode.StretchImage;
